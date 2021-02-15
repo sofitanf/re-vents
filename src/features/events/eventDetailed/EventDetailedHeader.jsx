@@ -1,24 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Segment, Image, Item, Header, Button } from "semantic-ui-react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Segment, Image, Item, Header, Button } from 'semantic-ui-react';
+import { format } from 'date-fns';
 
 const eventImageStyle = {
-  filter: "brightness(30%)",
+  filter: 'brightness(30%)',
 };
 
 const eventImageTextStyle = {
-  position: "absolute",
-  bottom: "5%",
-  left: "5%",
-  width: "100%",
-  height: "auto",
-  color: "white",
+  position: 'absolute',
+  bottom: '5%',
+  left: '5%',
+  width: '100%',
+  height: 'auto',
+  color: 'white',
 };
 
 function EventDetailedHeader({ title, category, date, hostedBy, id }) {
   return (
     <Segment.Group>
-      <Segment basic attached="top" style={{ padding: "0" }}>
+      <Segment basic attached='top' style={{ padding: '0' }}>
         <Image
           src={`/assets/categoryImages/${category}.jpg`}
           fluid
@@ -29,11 +30,11 @@ function EventDetailedHeader({ title, category, date, hostedBy, id }) {
             <Item>
               <Item.Content>
                 <Header
-                  size="huge"
+                  size='huge'
                   content={title}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 />
-                <p>{date}</p>
+                <p>{format(date, 'MMMM d, yyyy h:mm a')}</p>
                 <p>
                   Hosted by <strong>{hostedBy}</strong>
                 </p>
@@ -42,10 +43,10 @@ function EventDetailedHeader({ title, category, date, hostedBy, id }) {
           </Item.Group>
         </Segment>
       </Segment>
-      <Segment attached="bottom">
+      <Segment attached='bottom'>
         <Button>Cancel My Place</Button>
-        <Button color="teal">JOIN THIS EVENT</Button>
-        <Button as={Link} to={`/manage/${id}`} color="orange" floated="right">
+        <Button color='teal'>JOIN THIS EVENT</Button>
+        <Button as={Link} to={`/manage/${id}`} color='orange' floated='right'>
           Manage Event
         </Button>
       </Segment>
