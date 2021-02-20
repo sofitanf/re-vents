@@ -6,6 +6,7 @@ import EventDetailedPage from '../../features/events/eventDetailed/EventDetailed
 import EventForm from '../../features/events/eventForm/EventForm';
 import HomePage from '../../features/home/HomePage';
 import NavBar from '../../features/nav/NavBar';
+import ErrorComponent from '../common/errors/ErrorComponent';
 import ModalManager from '../common/modals/ModalManager';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                 component={EventForm}
                 key={key}
               />
+              <Route path='/error' component={ErrorComponent} />
             </Container>
           </>
         )}

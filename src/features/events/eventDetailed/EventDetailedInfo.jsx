@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Grid, Icon, Button } from 'semantic-ui-react';
+import { Segment, Grid, Icon } from 'semantic-ui-react';
 import { format } from 'date-fns';
 
 function EventDetailedInfo({ description, date, venue }) {
@@ -32,14 +32,6 @@ function EventDetailedInfo({ description, date, venue }) {
           </Grid.Column>
           <Grid.Column width={11}>
             <span>{venue}</span>
-          </Grid.Column>
-          <Grid.Column width={4}>
-            <Button
-              floated='right'
-              color='teal'
-              size='tiny'
-              content='Show Map'
-            />
           </Grid.Column>
         </Grid>
       </Segment>
