@@ -1,33 +1,57 @@
 import React from 'react';
-import { Placeholder, Segment } from 'semantic-ui-react';
+import {
+  Placeholder,
+  Segment,
+  Grid,
+  PlaceholderImage,
+  PlaceholderLine,
+} from 'semantic-ui-react';
 
 function EventDetailedInfoPlaceholder() {
   return (
     <Placeholder fluid>
       <Segment.Group clearing>
         <Segment attached='top'>
-          <Placeholder>
-            <Placeholder.Header image>
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Header>
-          </Placeholder>
+          <Grid>
+            <Grid.Column width={1}>
+              <Placeholder style={{ height: 30, width: 30 }}>
+                <PlaceholderImage />
+              </Placeholder>
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Placeholder>
+                <PlaceholderLine />
+              </Placeholder>
+            </Grid.Column>
+          </Grid>
         </Segment>
         <Segment attached>
-          <Placeholder>
-            <Placeholder.Header image>
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Header>
-          </Placeholder>
+          <Grid>
+            <Grid.Column width={1}>
+              <Placeholder style={{ height: 30, width: 30 }}>
+                <PlaceholderImage />
+              </Placeholder>
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Placeholder>
+                <PlaceholderLine />
+              </Placeholder>
+            </Grid.Column>
+          </Grid>
         </Segment>
         <Segment attached>
-          <Placeholder>
-            <Placeholder.Header image>
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Header>
-          </Placeholder>
+          <Grid>
+            <Grid.Column width={1}>
+              <Placeholder style={{ height: 30, width: 30 }}>
+                <PlaceholderImage />
+              </Placeholder>
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Placeholder>
+                <PlaceholderLine />
+              </Placeholder>
+            </Grid.Column>
+          </Grid>
         </Segment>
       </Segment.Group>
     </Placeholder>

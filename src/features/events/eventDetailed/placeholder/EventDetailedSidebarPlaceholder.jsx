@@ -1,5 +1,11 @@
 import React from 'react';
-import { Segment, Placeholder } from 'semantic-ui-react';
+import {
+  Segment,
+  Placeholder,
+  PlaceholderImage,
+  PlaceholderLine,
+  Grid,
+} from 'semantic-ui-react';
 
 function EventDetailedSidebarPlaceholder() {
   return (
@@ -15,20 +21,34 @@ function EventDetailedSidebarPlaceholder() {
         People Going
       </Segment>
       <Segment attached>
-        <Placeholder>
-          <Placeholder.Header image>
-            <Placeholder.Line />
-            <Placeholder.Line />
-          </Placeholder.Header>
-        </Placeholder>
+        <Grid>
+          <Grid.Column width={4}>
+            <Placeholder style={{ height: 80, width: 80 }}>
+              <PlaceholderImage />
+            </Placeholder>
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Placeholder>
+              <PlaceholderLine />
+              <PlaceholderLine />
+            </Placeholder>
+          </Grid.Column>
+        </Grid>
       </Segment>
       <Segment attached>
-        <Placeholder>
-          <Placeholder.Header image>
-            <Placeholder.Line />
-            <Placeholder.Line />
-          </Placeholder.Header>
-        </Placeholder>
+        <Grid>
+          <Grid.Column width={4}>
+            <Placeholder style={{ height: 80, width: 80 }}>
+              <PlaceholderImage />
+            </Placeholder>
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Placeholder>
+              <PlaceholderLine />
+              <PlaceholderLine />
+            </Placeholder>
+          </Grid.Column>
+        </Grid>
       </Segment>
     </Placeholder>
   );

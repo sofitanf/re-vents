@@ -11,7 +11,7 @@ function EventDetailedHeaderPlaceholder() {
     <Placeholder fluid>
       <Segment.Group>
         <Segment basic attached='top' style={{ padding: '0' }}>
-          <Placeholder>
+          <Placeholder style={{ height: '215px' }}>
             <PlaceholderImage />
           </Placeholder>
           <Segment>
