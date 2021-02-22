@@ -24,7 +24,7 @@ function EventDetailedPage({ match }) {
   useFirestoreDoc({
     query: () => listenToEventFromFirestore(match.params.id),
     data: (event) => dispatch(listenToEvents([event])),
-    deps: [match.params.id],
+    deps: [match.params.id, dispatch],
   });
 
   if (error) return <Redirect to='/error' />;

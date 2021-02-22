@@ -63,7 +63,7 @@ function EventForm({ match, history }) {
     shouldExecute: !!match.params.id,
     query: () => listenToEventFromFirestore(match.params.id),
     data: (event) => dispatch(listenToEvents([event])),
-    deps: [match.params.id],
+    deps: [match.params.id, dispatch],
   });
 
   if (loading) return <LoadingComponent content='Loading event' />;
@@ -80,6 +80,7 @@ function EventForm({ match, history }) {
             selectedEvent
               ? await updateEventInFirestore(values)
               : await addEventToFirestore(values);
+            setSubmitting(false);
             history.push('/events');
           } catch (error) {
             toast.error(error.message);

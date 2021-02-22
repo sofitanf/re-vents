@@ -22,7 +22,7 @@ export function dataFromSnapshot(snapshot) {
 }
 
 export function listenToEventsFromFirestore() {
-  return db.collection('events').orderBy('date');
+  return db.collection('events').orderBy('date', 'desc');
 }
 
 export function listenToEventFromFirestore(eventId) {
